@@ -1,0 +1,17 @@
+language: node_js
+node_js:
+  - '12'
+branches:
+  only:
+    - master
+deploy:
+  provider: heroku
+  skip_cleanup: true
+  on:
+    branch: master
+  api_key: ec3875aa-5a51-474c-b368-f0ce10adbe26
+     app: banking-nest-wdiaz-heroku
+notifications:
+  email:
+    on_failure: change
+    on_success: change
